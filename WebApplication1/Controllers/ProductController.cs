@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -12,8 +13,8 @@ namespace WebApplication1.Controllers
 
         public ActionResult Details(int Id)
         {
-
-            return View("Details");
+            var product = new Product(Id, "Laptop");
+            return View("Details", product);
         }
     }
 }
