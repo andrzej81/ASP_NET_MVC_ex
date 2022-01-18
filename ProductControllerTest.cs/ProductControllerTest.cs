@@ -28,7 +28,6 @@ namespace StoreTests.Controllers
         public void TestDetailsRedirect()
         {
             var controller = new ProductController();
-                 
             var result = (RedirectToActionResult) controller.Details(-1);
             Assert.Equal("Index", result.ActionName);
 
