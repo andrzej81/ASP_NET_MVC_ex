@@ -13,6 +13,9 @@ namespace WebApplication1.Controllers
 
         public ActionResult Details(int Id)
         {
+            if (Id < 1)
+                return RedirectToAction("Index");
+
             var product = new Product(Id, "Laptop");
             return View("Details", product);
         }
