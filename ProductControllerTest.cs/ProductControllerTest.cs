@@ -8,6 +8,14 @@ namespace StoreTests.Controllers
     public class ProductControllerTest
     {
         [Fact]
+        public void TestDetailsView()
+        {
+            var controller = new ProductController();
+            var result = controller.Details(2) as ViewResult;
+            Assert.Equal("Details", result.ViewName);
+
+        }
+        [Fact]
         public void TestDetailsViewData()
         {
             var controller = new ProductController();
